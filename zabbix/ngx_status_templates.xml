@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.2</version>
-    <date>2017-07-31T02:31:01Z</date>
+    <date>2017-08-02T07:09:06Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -110,7 +110,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>nginx alived status</name>
+                    <name>nginx alive</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
@@ -150,7 +150,7 @@
                         </application>
                     </applications>
                     <valuemap>
-                        <name>Nginx Alive Status</name>
+                        <name>Service state</name>
                     </valuemap>
                     <logtimefmt/>
                 </item>
@@ -438,15 +438,15 @@
     </graphs>
     <value_maps>
         <value_map>
-            <name>Nginx Alive Status</name>
+            <name>Service state</name>
             <mappings>
                 <mapping>
                     <value>0</value>
-                    <newvalue>deaded</newvalue>
+                    <newvalue>Down</newvalue>
                 </mapping>
                 <mapping>
                     <value>1</value>
-                    <newvalue>alived</newvalue>
+                    <newvalue>Up</newvalue>
                 </mapping>
             </mappings>
         </value_map>
