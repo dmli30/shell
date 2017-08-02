@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.2</version>
-    <date>2017-08-02T08:45:18Z</date>
+    <date>2017-08-02T08:54:28Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -79,7 +79,7 @@
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
-                    <units>obe</units>
+                    <units>Bps</units>
                     <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
