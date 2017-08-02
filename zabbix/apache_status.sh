@@ -22,5 +22,5 @@ function ping(){
 /usr/sbin/pidof httpd|wc -l
 }
 
-#根据脚本参数执行对应应函数
+#根据脚本参数执行对应函数
 $1
