@@ -19,13 +19,13 @@ function change_to_lt()
     echo "$LT_ip www.muzifei.com" >> /etc/hosts
 }
 
-rspCode=$(curl -s -k -I -m 5 -o /dev/null -w %{http_code} $checkURL)
+rspCode=$(curl -s -k -I -m 5 -o /dev/null -w %{http_code} $checkURL)    #设置获取状态码的总超时时间为5秒
 isDX=$(cat /tmp/isDX.txt)
 counter=$(cat /tmp/counter.txt)
 if [ $rspCode -eq 200 ] && [ $isDX -eq 1 ]; then
         echo "$(date "+%Y-%m-%d %H:%M:%S") 电信线路正常"
 elif [ $rspCode -eq 200 ] && [ $isDX -eq 0 ]; then
-    if [ $counter -eq 5 ]; then
+    if [ $counter -eq 5 ]; then    #线路恢复时，并不马上恢复，而是等5次计数后再切回，避免网络波动导致频繁切换
         echo "$(date "+%Y-%m-%d %H:%M:%S") 电信线路恢复，切回电信线路"
         change_to_dx
         echo "1" > /tmp/isDX.txt
