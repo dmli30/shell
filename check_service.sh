@@ -1,4 +1,6 @@
 #!/bin/bash
+#auther: dmli
+#description: 检测服务端口，如果端口不存在，则重启服务或进行其他操作
 
 sshd=(22)
 nginx=(80 443)
