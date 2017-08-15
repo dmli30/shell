@@ -19,7 +19,7 @@ function change_to_lt()
     echo "$LT_ip www.muzifei.com" >> /etc/hosts
 }
 
-rspCode=$(curl -s -k -I -m 5 -o /dev/null -w %{http_code} $checkURL)    #设置获取状态码的总超时时间为5秒
+rspCode=$(curl -s -k -m 5 -o /dev/null -w %{http_code} $checkURL)    #设置获取状态码的总超时时间为5秒
 isDX=$(cat /tmp/isDX.txt)
 counter=$(cat /tmp/counter.txt)
 if [ $rspCode -eq 200 ] && [ $isDX -eq 1 ]; then
